@@ -1,0 +1,15 @@
+arr=[1,2,6,4,34,74,13,65,2,7,6,765,67,45,32,]
+
+def ordenamiento_por_insercion(lista): 
+    lista_ordenada = lista[:] 
+    for i in range(1, len(lista_ordenada)): 
+        clave = lista_ordenada[i] 
+        j = i - 1 
+        while j >= 0 and lista_ordenada[j] > clave: 
+            lista_ordenada[j + 1] = lista_ordenada[j] 
+            j -= 1 
+    lista_ordenada[j + 1] = clave 
+    print(lista_ordenada)
+    return lista_ordenada
+
+ordenamiento_por_insercion(arr)
